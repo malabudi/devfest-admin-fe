@@ -1,8 +1,9 @@
 ## Getting Started
 
-First, run the development server:
+Run these commands before you start local host:
 
 ```bash
+npm install
 npm run dev
 ```
 
