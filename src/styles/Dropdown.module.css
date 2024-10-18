@@ -1,0 +1,83 @@
+.selectContainer {
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  #h1_tag {
+    margin: 9px;
+  }
+  
+  .select-wrap {
+    border: 1px solid #777;
+    border-radius: 4px;
+    padding: 0 5px;
+    width: 200px;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #666;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 16px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .select:focus {
+    outline: none;
+    border-color: #a0a9b4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .selectContainer::after {
+    position: absolute;
+    right: 16px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 0px solid #666;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .select option {
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .select:focus {
+    outline: none;
+    border-color: #51565b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .selectContainer:focus-within .select {
+    border-color: #51565b;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .select:active,
+  .select:focus {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-color: #51565b;
+  }
+  
+  .select option::after{
+    margin-top: 20px;
+  }
