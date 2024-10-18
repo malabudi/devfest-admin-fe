@@ -3,6 +3,9 @@
 First, run the development server:
 
 ```bash
+git clone (copy the HTTPS link from the github repo under the Code button)
+cd (into the project directory) 
+npm intall
 npm run dev
 ```
 

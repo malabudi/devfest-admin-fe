@@ -1,6 +1,7 @@
 "use client"; // Indicates that this is a client component
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [username, setUsername] = useState('');
@@ -18,6 +19,7 @@ export default function Home() {
     if (username === hardcodedUsername && password === hardcodedPassword) {
       console.log(true);  // Log true if credentials are valid
       setError('');       // Clear any previous error
+
     } else {
       console.log(false); // Log false if credentials are invalid
       setError('Invalid username or password'); // Display an error if credentials don't match
@@ -54,9 +56,18 @@ export default function Home() {
           {/* Error message if credentials are wrong */}
           {error && <p className="text-red-500 mb-4">{error}</p>}
 
-          <button className="bg-green-500 text-white w-96 rounded py-1" type="submit">
-            Log In
-          </button>
+          {/* Next.js Link wrapping the button */}
+          {!error && username === hardcodedUsername && password === hardcodedPassword ? (
+            <Link href="/select-year">
+              <button className="bg-green-500 text-white w-96 rounded py-1">
+                Log In
+              </button>
+            </Link>
+          ) : (
+            <button className="bg-green-500 text-white w-96 rounded py-1" type="submit">
+              Log In
+            </button>
+          )}
         </form>
       </main>
     </div>
