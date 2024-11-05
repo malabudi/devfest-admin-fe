@@ -18,13 +18,11 @@ export default function Home() {
     console.log("Edit row.");
   }
 
-  console.log("etste", data)
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-64">
       <h1 className="text-center text-4xl">Sponsors Table</h1>
       <Table rows={data ? data : []} columns={["Name", "Description", "Year", "URL"]} deleteRow={editRow} editRow={editRow} />
-
     </div>
   );
 }
